@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3D4145</color>
+    <color name="colorPrimaryDark">#25292E</color>
+    <color name="colorAccent">#388E3C</color>
+
+    <drawable name="background_item">#FFFFFF</drawable>
+    <drawable name="background_fragment">#FFFFFF</drawable>
+
+    <drawable name="image_empty">#AAAAAA</drawable>
+</resources>

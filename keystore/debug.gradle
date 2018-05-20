@@ -1,0 +1,11 @@
+signingConfigs {
+    debug {
+        storeFile file("debug.keystore")
+        storePassword "password"
+        keyAlias "alias"
+        keyPassword "keypass"
+
+        v1SigningEnabled true
+        v2SigningEnabled true
+    }
+}

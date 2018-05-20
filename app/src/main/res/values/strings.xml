@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ghsv</string>
+
+    <!-- common -->
+    <string name="empty">---</string>
+
+    <!-- state -->
+    <string name="loading">Loading</string>
+    <string name="offline">Offline</string>
+    <string name="error">Connection error</string>
+
+    <!-- detail -->
+    <string name="detail_format_bio">“ %1$s “</string>
+
+    <string name="detail_company">Company: %1$s</string>
+    <string name="detail_location">Location: %1$s</string>
+    <string name="detail_email">Contact: %1$s</string>
+
+    <string name="detail_public_repos">Public Repos: %1$d</string>
+    <string name="detail_public_gists">Public Gists: %1$d</string>
+
+    <string name="detail_followers">Followers: %1$d</string>
+    <string name="detail_following">Following: %1$d</string>
+
+    <string name="detail_created_at">Created: %1$s</string>
+    <string name="detail_updated_at">Updated: %1$s</string>
+
+</resources>
