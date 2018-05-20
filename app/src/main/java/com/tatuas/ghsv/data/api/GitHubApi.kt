@@ -1,6 +1,5 @@
 package com.tatuas.ghsv.data.api
 
-import android.content.Context
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,12 +15,12 @@ class GitHubApi {
         @Volatile
         private var service: GitHubApiService? = null
 
-        fun getService(context: Context) = service ?: synchronized(this) {
-            service ?: buildService(context.applicationContext)
+        fun getService() = service ?: synchronized(this) {
+            service ?: buildService()
                     .also { service = it }
         }
 
-        private fun buildService(context: Context): GitHubApiService {
+        private fun buildService(): GitHubApiService {
             // parser
             val moshi = Moshi.Builder().build()
 

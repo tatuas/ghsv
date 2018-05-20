@@ -10,7 +10,7 @@ import com.tatuas.ghsv.ui.main.MainViewModel
 
 @Suppress("UNCHECKED_CAST")
 class ViewModelFactory(context: Context) : ViewModelProvider.Factory {
-    private val gitHubApiService = GitHubApi.getService(context)
+    private val gitHubApiService = GitHubApi.getService()
     private val userDatabase = UserDatabase.getInstance(context)
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
