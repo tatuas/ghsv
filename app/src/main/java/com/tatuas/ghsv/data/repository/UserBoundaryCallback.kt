@@ -1,7 +1,7 @@
 package com.tatuas.ghsv.data.repository
 
-import android.arch.paging.PagedList
-import android.support.annotation.MainThread
+import androidx.annotation.MainThread
+import androidx.paging.PagedList
 import com.tatuas.ghsv.data.api.GitHubApiService
 import com.tatuas.ghsv.data.db.User
 import com.tatuas.ghsv.data.db.UserDatabase

@@ -1,8 +1,8 @@
 package com.tatuas.ghsv.ui.detail
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.tatuas.ghsv.data.api.GitHubApiService
 import com.tatuas.ghsv.data.api.GitHubDetailUser
 import io.reactivex.android.schedulers.AndroidSchedulers

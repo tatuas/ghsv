@@ -1,11 +1,11 @@
 package com.tatuas.ghsv.ui.main
 
-import android.arch.paging.PagedListAdapter
 import android.content.Context
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.tatuas.ghsv.R
 import com.tatuas.ghsv.data.db.User
 import com.tatuas.ghsv.data.glide.GlideApp

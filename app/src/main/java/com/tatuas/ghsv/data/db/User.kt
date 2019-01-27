@@ -1,9 +1,9 @@
 package com.tatuas.ghsv.data.db
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.Index
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.Index
+import androidx.room.PrimaryKey
 import com.tatuas.ghsv.data.api.GitHubListUser
 
 @Entity(tableName = User.Constant.TABLE_NAME,

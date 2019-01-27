@@ -1,9 +1,9 @@
 package com.tatuas.ghsv.data.repository
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.support.annotation.MainThread
-import android.support.annotation.WorkerThread
+import androidx.annotation.MainThread
+import androidx.annotation.WorkerThread
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.tatuas.ghsv.data.api.GitHubApiService
 import com.tatuas.ghsv.data.db.User
 import com.tatuas.ghsv.data.db.UserDatabase

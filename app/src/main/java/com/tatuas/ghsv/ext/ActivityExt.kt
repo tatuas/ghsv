@@ -1,8 +1,8 @@
 package com.tatuas.ghsv.ext
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProviders
 import com.tatuas.ghsv.data.viewmodel.ViewModelFactory
 
 fun <T : ViewModel> AppCompatActivity.buildViewModel(modelClass: Class<T>): Lazy<T> = lazy {

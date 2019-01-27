@@ -3,8 +3,8 @@ package com.tatuas.ghsv.ui.detail
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.tatuas.ghsv.R
 import com.tatuas.ghsv.ext.buildViewModel
 import com.tatuas.ghsv.ext.observeNonNull

@@ -1,8 +1,8 @@
 package com.tatuas.ghsv.data.viewmodel
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
 import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.tatuas.ghsv.data.api.GitHubApi
 import com.tatuas.ghsv.data.db.UserDatabase
 import com.tatuas.ghsv.ui.detail.DetailViewModel
