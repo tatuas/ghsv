@@ -49,9 +49,9 @@ class MainFragment : Fragment() {
             it.setOnRefreshListener { viewModel.refreshUserList() }
         }
 
-        viewModel.userListLiveData.observeNullable(this, { adapter.submitList(it) })
+        viewModel.userListLiveData.observeNullable(this) { adapter.submitList(it) }
 
-        viewModel.stateLiveData.observeNonNull(this, {
+        viewModel.stateLiveData.observeNonNull(this) {
             when (it) {
                 MainViewModel.State.Loading -> {
                     binding.state.setText(R.string.loading)
@@ -69,7 +69,7 @@ class MainFragment : Fragment() {
                     binding.state.setText(R.string.error)
                 }
             }
-        })
+        }
 
         viewModel.initializeUserList()
     }

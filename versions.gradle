@@ -2,34 +2,34 @@ ext.deps = [:]
 def versions = [:]
 
 // app
-versions.app_name = "1.0"
-versions.app_code = 1
+versions.app_name = "2.0"
+versions.app_code = 2
 
 // sdk
-versions.sdk_build_tools = "27.0.3"
+versions.sdk_build_tools = "28.0.3"
 versions.sdk_min = 21
-versions.sdk_target = 27
-versions.sdk_compile = 27
+versions.sdk_target = 28
+versions.sdk_compile = 28
 
 // google
-versions.support = "27.1.1"
-versions.constraint = "1.1.0"
+versions.support = "28.0.0"
+versions.constraint = "1.1.3"
 versions.lifecycle = "1.1.1"
-versions.room = "1.1.1-rc1"
-versions.paging = "1.0.0"
+versions.room = "1.1.1"
+versions.paging = "1.0.1"
 
 // rx
-versions.rxjava = "2.1.13"
-versions.rxkotlin = "2.2.0"
-versions.rxandroid = "2.0.2"
+versions.rxjava = "2.2.6"
+versions.rxkotlin = "2.3.0"
+versions.rxandroid = "2.1.0"
 
 // misc
-versions.circleimageview = "2.2.0"
-versions.glide = "4.7.1"
-versions.moshi = "1.6.0"
+versions.circleimageview = "3.0.0"
+versions.glide = "4.8.0"
+versions.moshi = "1.8.0"
 versions.chuck = "1.1.0"
-versions.retrofit = "2.4.0"
-versions.okhttp = "3.10.0" // Retrofit の OkHttp に合わせている
-versions.timber = "4.7.0"
+versions.retrofit = "2.5.0"
+versions.okhttp = "3.12.0" // Retrofit の OkHttp に合わせている
+versions.timber = "4.7.1"
 
 ext.versions = versions

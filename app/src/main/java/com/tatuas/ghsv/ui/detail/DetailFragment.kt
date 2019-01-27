@@ -1,6 +1,5 @@
 package com.tatuas.ghsv.ui.detail
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.text.format.DateUtils
@@ -31,7 +30,7 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.detailLiveData.observeNonNull(this, {
+        viewModel.detailLiveData.observeNonNull(this) {
             GlideApp.with(activity!!)
                     .loadDefault(it.avatar_url)
                     .centerCrop()
@@ -49,9 +48,9 @@ class DetailFragment : Fragment() {
                     .loadGlass(it.login)
                     .fitCenter()
                     .into(binding.detail.glass)
-        })
+        }
 
-        viewModel.stateLiveData.observe(this, Observer {
+        viewModel.stateLiveData.observeNonNull(this) {
             when (it) {
                 DetailViewModel.State.Loading -> {
                     binding.state.setText(R.string.loading)
@@ -70,7 +69,7 @@ class DetailFragment : Fragment() {
                     binding.detail.root.toGone()
                 }
             }
-        })
+        }
     }
 
     private fun convertToFriendlyDateTextFrom(rawDateText: String): String {

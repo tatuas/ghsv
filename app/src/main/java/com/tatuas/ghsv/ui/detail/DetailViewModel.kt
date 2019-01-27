@@ -37,7 +37,7 @@ class DetailViewModel(private val gitHubApiService: GitHubApiService) : ViewMode
 
         _stateLiveData.value = State.Loading
 
-        gitHubApiService.getUserDetail(name!!)
+        gitHubApiService.getUserDetail(name)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(

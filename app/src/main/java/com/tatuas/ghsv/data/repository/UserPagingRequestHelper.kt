@@ -35,19 +35,18 @@ class UserPagingRequestHelper(private val executor: Executor,
 
     @MainThread
     fun loadInitialIfNotRunning() {
-        runIfNotRunning(PagingRequestHelper.RequestType.INITIAL, { callback ->
+        runIfNotRunning(PagingRequestHelper.RequestType.INITIAL) { callback ->
             executor.execute {
-                userDatabase.dao().clear()
-                fetch(null, callback)
+                fetch(null, RequestType.INITIAL, callback)
             }
-        })
+        }
     }
 
     @MainThread
     fun loadAfterIfNotRunning(id: Long) {
-        runIfNotRunning(PagingRequestHelper.RequestType.AFTER, { callback ->
-            executor.execute { fetch(id, callback) }
-        })
+        runIfNotRunning(PagingRequestHelper.RequestType.AFTER) { callback ->
+            executor.execute { fetch(id, RequestType.AFTER, callback) }
+        }
     }
 
     fun startStateListening() {
@@ -59,10 +58,16 @@ class UserPagingRequestHelper(private val executor: Executor,
     }
 
     @WorkerThread
-    private fun fetch(id: Long?, callback: Request.Callback) =
+    private fun fetch(id: Long?, requestType: RequestType, callback: Request.Callback) =
             gitHubApiService.getUserList(id)
-                    .map { it.map { User.from(it) } }
-                    .map { userDatabase.dao().save(it) }
+                    .map { githubListUserList -> githubListUserList.map { item -> User.from(item) } }
+                    .map {
+                        if (RequestType.INITIAL == requestType) {
+                            userDatabase.dao().clear()
+                        }
+
+                        userDatabase.dao().save(it)
+                    }
                     .map { callback.recordSuccess() }
                     .onErrorReturn {
                         Timber.d(it)

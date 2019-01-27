@@ -43,7 +43,7 @@ class MainViewModel(gitHubApiService: GitHubApiService, userDatabase: UserDataba
                     .build()
 
     val stateLiveData: LiveData<State> = Transformations.switchMap(
-            boundaryCallback.helper.stateLiveData, {
+            boundaryCallback.helper.stateLiveData) {
         MutableLiveData<State>().also { liveData ->
             liveData.value = when (it) {
                 UserPagingRequestHelper.State.Loading -> State.Loading
@@ -56,7 +56,7 @@ class MainViewModel(gitHubApiService: GitHubApiService, userDatabase: UserDataba
                 }
             }
         }
-    })
+    }
 
     fun initializeUserList() {
         if (true == _initializedLiveData.value) return

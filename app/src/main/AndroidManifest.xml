@@ -29,6 +29,7 @@
 
         <activity
             android:name=".ui.detail.DetailActivity"
+            android:launchMode="singleTop"
             android:exported="false"
             android:label="" />
 
